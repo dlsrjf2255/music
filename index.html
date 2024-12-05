@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css"> <!-- 기존 스타일시트를 사용하여 미적 요소 적용 -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <title>오디오 포트폴리오 템플릿</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images/IT_tid286t000160_300dpi.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .audio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .audio-item {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .audio-item:hover {
+            transform: scale(1.05);
+        }
+        .audio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .audio-item {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+        #banner {
+            margin-bottom: 30px;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audioElements = document.querySelectorAll("audio");
+            audioElements.forEach(audio => {
+                audio.addEventListener("play", function() {
+                    audioElements.forEach(otherAudio => {
+                        if (otherAudio !== audio) {
+                            otherAudio.pause();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <section id="banner">
+        <h1>오디오 포트폴리오</h1>
+        <p>아래에서 나만의 오디오 작품을 감상해보세요!</p>
+    </section>
+
+    <div class="audio-container">
+        <!-- 오디오 아이템 1 -->
+        <div class="audio-item">
+            <img src="images/pic01.jpg" alt="오디오 트랙 1">
+            <h3>베르테르</h3>
+            <audio controls>
+                <source src="audio/베르테르.mp3" type="audio/mpeg">
+                브라우저가 오디오 요소를 지원하지 않습니다.
+            </audio>
+        </div>
+        
+        <!-- 오디오 아이템 2 -->
+        <div class="audio-item">
+            <img src="images/pic02.jpg" alt="오디오 트랙 2">
+            <h3>sleepless</h3>
+            <audio controls>
+                <source src="audio/습작 27 sleepless.mp3" type="audio/mpeg">
+                브라우저가 오디오 요소를 지원하지 않습니다.
+            </audio>
+        </div>
+
+        <!-- 오디오 아이템 3 -->
+        <div class="audio-item">
+            <img src="images/pic03.jpg" alt="오디오 트랙 3">
+            <h3>삼백안</h3>
+            <audio controls>
+                <source src="audio/습작 36 삼백안.mp3" type="audio/mpeg">
+                브라우저가 오디오 요소를 지원하지 않습니다.
+            </audio>
+        </div>
+
+        <!-- 오디오 아이템 4 -->
+        <div class="audio-item">
+            <img src="images/pic04.jpg" alt="오디오 트랙 4">
+            <h3>블랙코미디</h3>
+            <audio controls>
+                <source src="audio/블랙코미디.mp3" type="audio/mpeg">
+                브라우저가 오디오 요소를 지원하지 않습니다.
+            </audio>
+        </div>
+
+        <!-- 오디오 아이템 5 -->
+        <div class="audio-item">
+            <img src="images/pic05.jpg" alt="오디오 트랙 5">
+            <h3>44</h3>
+            <audio controls>
+                <source src="audio/습작 44.mp3" type="audio/mpeg">
+                브라우저가 오디오 요소를 지원하지 않습니다.
+            </audio>
+        </div>
+
+        <!-- 오디오 아이템 6 -->
+        <div class="audio-item">
+            <img src="images/pic06.jpg" alt="오디오 트랙 6">
+            <h3>lo-fi</h3>
+            <audio controls>
+                <source src="audio/로우파이 연습 루프.mp3" type="audio/mpeg">
+                브라우저가 오디오 요소를 지원하지 않습니다.
+            </audio>
+        </div>
+
+        <!-- 오디오 아이템 7 -->
+        <div class="audio-item">
+            <img src="images/pic01.jpg" alt="오디오 트랙 7">
+            <h3>피터팬 컴플렉스</h3>
+            <audio controls>
+                <source src="audio/피터팬 컴플렉스 mr.mp3" type="audio/mpeg">
+                브라우저가 오디오 요소를 지원하지 않습니다.
+            </audio>
+        </div>
+
+        <!-- 오디오 아이템 8 -->
+        <div class="audio-item">
+            <img src="images/pic02.jpg" alt="오디오 트랙 8">
+            <h3>Escape</h3>
+            <audio controls>
+                <source src="audio/시안최종.m4a" type="audio/mpeg">
+                브라우저가 오디오 요소를 지원하지 않습니다.
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
